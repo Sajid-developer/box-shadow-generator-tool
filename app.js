@@ -1,9 +1,5 @@
 console.log("App running successfully...");
 
-const controls=document.querySelectorAll(".shadow-controls .group .control");
-const copyBtn=document.querySelector(".shadow-result .shadow-code .copyBtn");
-const codeContent=document.querySelector(".shadow-result .shadow-code .code");
-const shadowBox=document.querySelector(".shadow-result .shadow-box");
 
 let xValue=0, 
     yValue=4, 
