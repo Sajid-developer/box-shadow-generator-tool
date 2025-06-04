@@ -5,8 +5,13 @@ const copyBtn=document.querySelector(".shadow-result .shadow-code .copyBtn");
 const codeContent=document.querySelector(".shadow-result .shadow-code .code");
 const shadowBox=document.querySelector(".shadow-result .shadow-box");
 
+let xValue=0, 
+    yValue=4, 
+    spreadValue=7, 
+    blurValue=40, 
+    opacityValue=0.3, 
+    colorValue="rgba(0, 0, 0, 0.2)";
 
-let xValue=0, yValue=4, spreadValue=7, blurValue=40, opacityValue=0.3, colorValue="#000000";
 let insetStatus=false;
 
 const hexToRGBA=(hex)=>{
@@ -20,10 +25,10 @@ const hexToRGBA=(hex)=>{
 const GenerateShadow=()=>{
     if(insetStatus){
        shadowBox.style.boxShadow=`inset ${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue}`;
-       codeContent.innerHTML=`Box-shadow: <span style="color: rgb(32, 199, 255);"> ${shadowBox.style.boxShadow};</span>`;
+       codeContent.innerHTML=`Box-shadow: <span style="color: rgb(32, 199, 255);"> inset ${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue};</span>`;
     }else{
        shadowBox.style.boxShadow=`${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue}`;
-       codeContent.innerHTML=`Box-shadow: <span style="color: rgb(32, 199, 255);"> ${shadowBox.style.boxShadow};</span>`;
+       codeContent.innerHTML=`Box-shadow: <span style="color: rgb(32, 199, 255);"> ${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue};</span>`;
     }
 }
 
@@ -46,14 +51,22 @@ controls.forEach(control =>{
 });
 
 copyBtn.addEventListener("click", ()=>{
-   let code=`box-shadow: ${shadowBox.style.boxShadow};`;
-   let finalCode=code;
-   navigator.clipboard.writeText(finalCode);
-   copyBtn.textContent="copied";
+    let code='';
+    let finalCode='';
 
-   setTimeout(() => {
-     copyBtn.textContent="copy";
-   }, 1500);
+    if(insetStatus){
+        code=`box-shadow: inset ${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue};`;
+    }else{
+        code=`box-shadow: ${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue};`;
+      }
+
+        finalCode=code;
+        navigator.clipboard.writeText(finalCode);
+        copyBtn.textContent="copied";
+
+        setTimeout(() => {
+            copyBtn.textContent="copy";
+        }, 1500);
 });
 
 // console.log(shadowBox);
