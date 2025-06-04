@@ -7,9 +7,9 @@ const shadowBox=document.querySelector(".shadow-result .shadow-box");
 
 let xValue=0, 
     yValue=4, 
-    spreadValue=7, 
+    spreadValue=6, 
     blurValue=40, 
-    opacityValue=0.3, 
+    opacityValue=0.2, 
     colorValue="rgba(0, 0, 0, 0.2)";
 
 let insetStatus=false;
