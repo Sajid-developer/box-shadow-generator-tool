@@ -8,8 +8,44 @@
 <body>
 
     <section class="box-shadow-container">
-        <div class="haeding">
+        <div class="heading">
             <h1>Box shadow generator</h1>
+        </div>
+
+        <div class="shadow-controls">
+            <div class="group">
+                <h3>X-offset</h3>
+                <input type="range" min="-40" max="40" step="1" value="12" class="control" id="x-offset">
+            </div>
+            <div class="group">
+                <h3>Y-offset</h3>
+                <input type="range" min="-40" max="40" step="1" value="12" class="control" id="y-offset">
+            </div>
+            <div class="group">
+                <h3>Blur shadow</h3>
+                <input type="range" min="0" max="40" step="1" value="12" class="control" id="blur-shadow">
+            </div>
+            <div class="group">
+                <h3>Spread shadow</h3>
+                <input type="range" min="0" max="100" step="1" value="12" class="control" id="spread-shadow">
+            </div>
+            <div class="group">
+                <h3>Opacity</h3>
+                <input type="range" min="0" max="1" step="0.1" value="0.4" class="control" id="opacity">
+            </div>
+
+            <div class="container">
+                <div class="group">
+                    <h3>Color</h3>
+                    <input type="color" class="control" id="shadow-color">
+                </div>
+                <div class="group">
+                    <h3>Inset</h3>
+                    <input type="checkbox" class="control" id="inset">
+                </div>
+            </div>
+
+
         </div>
     </section>
     
