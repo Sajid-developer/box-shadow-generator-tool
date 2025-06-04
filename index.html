@@ -18,7 +18,7 @@
             <div class="shadow-controls">
                 <div class="group">
                     <h3>X-offset</h3>
-                    <input type="range" min="-40" max="40" step="1" value="-10" class="control" id="x-offset">
+                    <input type="range" min="-40" max="40" step="1" value="0" class="control" id="x-offset">
                 </div>
                 <div class="group">
                     <h3>Y-offset</h3>
@@ -26,11 +26,11 @@
                 </div>
                 <div class="group">
                     <h3>Blur shadow</h3>
-                    <input type="range" min="0" max="40" step="1" value="7" class="control" id="blur-shadow">
+                    <input type="range" min="0" max="60" step="1" value="40" class="control" id="blur-shadow">
                 </div>
                 <div class="group">
                     <h3>Spread shadow</h3>
-                    <input type="range" min="0" max="100" step="1" value="42" class="control" id="spread-shadow">
+                    <input type="range" min="0" max="60" step="1" value="7" class="control" id="spread-shadow">
                 </div>
                 <div class="group">
                     <h3>Opacity</h3>
@@ -40,7 +40,7 @@
                 <div class="container">
                     <div class="group">
                         <h3>Color</h3>
-                        <input type="color" value="#111155" class="control" id="shadow-color">
+                        <input type="color" value="#000000" class="control" id="shadow-color">
                     </div>
                     <div class="group">
                         <h3>Inset</h3>
@@ -52,14 +52,14 @@
         <div class="shadow-result">
            <div class="shadow-box"></div>
            <div class="shadow-code">
-             <p class="code">Box-shadow: <span style="color: rgb(32, 199, 255);">0px 0px 4px 8px rgba(0, 0, 0, 0.2);</span></p>
-             <button class="copy-code">Copy</button>
+             <p class="code">Box-shadow: <span style="color: rgb(32, 199, 255);">0px 4px 38px 7px rgba(0, 0, 0, 0.3);</span></p>
+             <button class="copyBtn">Copy</button>
            </div>
         </div>
-
-    </div>
-        
+    </div>   
 </section>
+
+<script src="app.js" defer></script>
     
 </body>
 </html>
