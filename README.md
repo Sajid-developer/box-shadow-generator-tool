@@ -1,2 +1,2 @@
-# Box Shadow generator
+# Box Shadow Generator
 A very useful box shadow generator tool.💡
